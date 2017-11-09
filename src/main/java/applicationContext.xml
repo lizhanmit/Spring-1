@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- config bean through property -->
+	<bean id="helloWorld" class="com.zhanlearning.spring.beans.HelloWorld">
+		<property name="name" value="Spring"></property>
+	</bean>
+	
+	<!-- config bean through constructor, according to sequence by default, or according to index or type if you specify-->
+	<bean id="car" class="com.zhanlearning.spring.beans.Car">
+		<constructor-arg value="Audi" index="0"></constructor-arg>
+		<constructor-arg value="Shanghai" index="1"></constructor-arg>
+		<constructor-arg value="300000" type="double"></constructor-arg>
+	</bean>
+	
+	<!-- <![CDATA[]]> is used for special characters -->
+	<bean id="car2" class="com.zhanlearning.spring.beans.Car">
+		<constructor-arg value="Baoma" type="String"></constructor-arg>
+		<constructor-arg type="String">
+			<value><![CDATA[<Beijing ^_^>]]></value> 
+		</constructor-arg>
+		<constructor-arg type="int">
+			<value>250</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="person" class="com.zhanlearning.spring.beans.Person">
+		<property name="name" value="Tom"></property>
+		<property name="age" value="24"></property>
+		<!-- use "ref" of property to connect different beans -->
+		<!--
+		<property name="car" ref="car2"></property>
+		-->
+		 
+		<!-- internal bean, do not need to write id, as it cannot be accessed externally -->
+		<property name="car">
+			<bean class="com.zhanlearning.spring.beans.Car">
+				<constructor-arg value="Ford"></constructor-arg>
+				<constructor-arg value="Changan"></constructor-arg>
+				<constructor-arg value="100000" type="double"></constructor-arg>
+			</bean>
+		</property>
+	</bean>
+</beans>
