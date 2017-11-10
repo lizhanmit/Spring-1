@@ -43,4 +43,37 @@
 			</bean>
 		</property>
 	</bean>
+	
+	<bean id="person2" class="com.zhanlearning.spring.beans.Person">
+		<constructor-arg value="Jerry"></constructor-arg>
+		<constructor-arg value="20"></constructor-arg>
+		<!-- 
+		<constructor-arg ref="car"></constructor-arg>
+		-->
+		
+		<!-- assign null value -->
+		<!-- 
+		<constructor-arg><null/></constructor-arg>
+		-->
+		 
+		<constructor-arg ref="car"></constructor-arg>
+		<!-- assign value to cascading properties -->
+		<property name="car.maxSpeed" value="250"></property>
+	</bean>
+	
+	<bean id="person3" class="com.zhanlearning.spring.beans.collections.Person">
+		<property name="name" value="Mike"></property>
+		<property name="age" value="27"></property>
+		<property name="cars">
+			<list>
+				<ref bean="car"/>
+				<ref bean="car2"/>
+				<bean class="com.zhanlearning.spring.beans.Car">
+					<constructor-arg value="Ford"></constructor-arg>
+					<constructor-arg value="Changan"></constructor-arg>
+					<constructor-arg value="100000" type="double"></constructor-arg>
+				</bean>
+			</list>
+		</property>
+	</bean>
 </beans>

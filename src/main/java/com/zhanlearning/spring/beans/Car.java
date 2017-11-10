@@ -26,6 +26,16 @@ public class Car {
 	@Override
 	public String toString() {
 		return "Car [brand=" + brand + ", corp=" + corp + ", price=" + price + ", maxSpeed=" + maxSpeed + "]";
+	}
+
+
+	public int getMaxSpeed() {
+		return maxSpeed;
+	}
+
+
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
 	} 
 	
 	
