@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- default scope is "singleton", which means created beans in Main are the same -->
+	<!-- if assign scope as "prototype", created beans in Main are different -->
+	<bean id="car" class="com.zhanlearning.spring.beans.autowire.Car" scope="prototype">
+		<property name="brand" value="Audi"></property>
+		<property name="price" value="200000"></property>
+	</bean>
+</beans>
