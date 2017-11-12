@@ -12,6 +12,7 @@
 		<config>src/main/java/beans-relation.xml</config>
 		<config>src/main/java/beans-scope.xml</config>
 		<config>src/main/java/beans-properties.xml</config>
+		<config>src/main/java/beans-annotation.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
