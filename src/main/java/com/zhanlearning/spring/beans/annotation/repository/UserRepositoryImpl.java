@@ -2,12 +2,12 @@ package com.zhanlearning.spring.beans.annotation.repository;
 
 import org.springframework.stereotype.Repository;
 
-@Repository("userRespository")
-public class UserRespositoryImpl implements UserRespository {
+@Repository("userRepository")
+public class UserRepositoryImpl implements UserRepository {
 
 	public void save() {
 
-		System.out.println("UserRespository save ...");
+		System.out.println("UserRepository save ...");
 	}
 
 }
