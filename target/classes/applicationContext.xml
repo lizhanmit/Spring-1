@@ -17,7 +17,7 @@
 		<constructor-arg value="Shanghai" index="1"></constructor-arg>
 		<constructor-arg value="300000" type="double"></constructor-arg>
 	</bean>
-	
+ 	
 	<!-- <![CDATA[]]> is used for special characters -->
 	<bean id="car2" class="com.zhanlearning.spring.beans.Car">
 		<constructor-arg value="Baoma" type="String"></constructor-arg>
@@ -119,4 +119,6 @@
 	
 	<!-- use p namespace to configure bean, need to introduce p namespace firstly -->
 	<bean id="person5" class="com.zhanlearning.spring.beans.collections.Person" p:name="Queen" p:age="30" p:cars-ref="cars"></bean>
+
+
 </beans>

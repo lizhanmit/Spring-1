@@ -4,10 +4,10 @@ public class Car {
 
 	private String brand; 
 	private String corp; 
-	private double price; 
+	private int price; 
 	private int maxSpeed;
 	
-	public Car(String brand, String corp, double price) {
+	public Car(String brand, String corp, int price) {
 		super();
 		this.brand = brand;
 		this.corp = corp;
@@ -15,12 +15,12 @@ public class Car {
 	}
 
 	
-	public Car(String brand, String corp, int maxSpeed) {
-		super();
-		this.brand = brand;
-		this.corp = corp;
-		this.maxSpeed = maxSpeed;
-	}
+//	public Car(String brand, String corp, int maxSpeed) {
+//		super();
+//		this.brand = brand;
+//		this.corp = corp;
+//		this.maxSpeed = maxSpeed;
+//	}
 
 
 	@Override
